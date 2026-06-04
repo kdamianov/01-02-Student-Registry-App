@@ -32,7 +32,7 @@ jobs:
     name: Deploy to Render
     needs: test
     runs-on: ubuntu-latest
-
+    if: github.ref == 'refs/head/main'
     steps:
       - name: Deploy app
         uses: johnbeynon/render-deploy-action@v0.0.8
